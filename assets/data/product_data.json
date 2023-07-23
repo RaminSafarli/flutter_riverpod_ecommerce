@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "productId": 1,
+      "title": "Airpods Pro",
+      "shortDescription": "Short description about Airpods",
+      "description": "Description about Airpods",
+      "rating": 4.5,
+      "review": 34,
+      "imageUrl": "assets/images/airpod.png",
+      "price": "$199"
+    },
+    {
+      "productId": 2,
+      "title": "iPhone 12 Pro Max",
+      "shortDescription": "512GB Unlocked",
+      "description": "Description about Airpods",
+      "rating": 4.5,
+      "review": 34,
+      "imageUrl": "assets/images/iphone.png",
+      "price": "$2867"
+    },
+    {
+      "productId": 3,
+      "title": "Apple Watch Series 8",
+      "shortDescription": "Short description about Airpods",
+      "description": "Description about Airpods",
+      "rating": 4.5,
+      "review": 34,
+      "imageUrl": "assets/images/appleWatch.png",
+      "price": "$1396"
+    }
+  ]
+}
