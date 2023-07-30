@@ -35,9 +35,10 @@ class ProductCardWidget extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: [
                   BoxShadow(
-                    offset: const Offset(0, 1),
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 1,
+                    offset: const Offset(0, 6),
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 8,
+                    spreadRadius: 2,
                   ),
                 ]),
             width: MediaQuery.of(context).size.width * 0.5,
@@ -69,7 +70,7 @@ class ProductCardWidget extends ConsumerWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            products[index].price.toString(),
+                            '\$${products[index].price}',
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
@@ -79,10 +80,20 @@ class ProductCardWidget extends ConsumerWidget {
                               ref
                                   .read(productStateNotifier.notifier)
                                   .toggle(products[index]);
+
+                              if (products[index].isSelected == false) {
+                                ref
+                                    .read(basketProvider.notifier)
+                                    .addProduct(products[index]);
+                              } else {
+                                ref
+                                    .read(basketProvider.notifier)
+                                    .removeProduct(products[index].productId);
+                              }
                             },
                             icon: products[index].isSelected
-                                ? const Icon(Icons.add_circle)
-                                : const Icon(Icons.remove_circle),
+                                ? const Icon(Icons.check_circle)
+                                : const Icon(Icons.add_circle),
                           )
                         ],
                       ),

@@ -11,7 +11,8 @@ final List<Product2> products = [
       imageUrl: "assets/images/magicWireless.png",
       price: 45.60,
       filterCategoryId: 1,
-      isSelected: false),
+      isSelected: false,
+      quantity: 1),
   Product2(
       productId: 2,
       title: "Macbook",
@@ -22,7 +23,8 @@ final List<Product2> products = [
       imageUrl: "assets/images/macbook.png",
       price: 45.60,
       filterCategoryId: 1,
-      isSelected: true),
+      isSelected: false,
+      quantity: 1),
   Product2(
       productId: 3,
       title: "iPad",
@@ -33,7 +35,8 @@ final List<Product2> products = [
       imageUrl: "assets/images/ipad.png",
       price: 45.60,
       filterCategoryId: 2,
-      isSelected: false),
+      isSelected: false,
+      quantity: 1),
   Product2(
       productId: 4,
       title: "iPad",
@@ -44,5 +47,6 @@ final List<Product2> products = [
       imageUrl: "assets/images/appleWatch.png",
       price: 45.60,
       filterCategoryId: 2,
-      isSelected: false),
+      isSelected: false,
+      quantity: 1),
 ];
